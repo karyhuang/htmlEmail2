@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style type="text/css">
+    body {
+      Margin: 0!important;
+      padding: 15px;
+      background-color: #FFF;
+    }
+    .wrapper {
+      width: 100%;
+      table-layout: fixed;
+    }
+    .wrapper-inner {
+      width: 100%;
+      background-color: #eee;
+      max-width: 670px;
+      Margin: 0 auto;
+    }
+    table {
+      border-spacing: 0;
+      font-family: sans-serif;
+      color: #727f80;
+    }
+    .outer-table {
+      width: 100%;
+      max-width: 670px;
+      margin: 0 auto;
+      background-color: #FFF;
+    }
+    td {
+        padding: 0;
+    }
+    .header {
+        background-color: #C2C1C1;
+        border-bottom: 3px solid #81B9C3;
+    }
+    p {
+        Margin:0;
+    }
+    .header p {
+        text-align: center;
+        padding: 1%;
+        font-weight: 500;
+        font-size: 11px;
+        text-transform: uppercase;
+    }
+    a {
+        color: #F1F1F1;
+        text-decoration: none;
+    }
+    /*--- End Outer Table 1 --*/
+    .main-table-first {
+      width: 100%;
+      max-width: 610px;
+      Margin: 0 auto;
+      background-color: #FFF;
+      border-radius: 6px;
+      margin-top: 25px;
+    }
+    /*--- Start Two Column Sections --*/
+    .two-column {
+        text-align: center;
+        font-size: 0;
+        padding: 5px 0 10px 0;
+    }
+    .two-column .section {
+        width: 100%;
+        max-width: 300px;
+        display: inline-block;
+        vertical-align: top;
+    }
+    .two-column .content {
+        font-size: 16px;
+        line-height: 20px;
+        text-align: justify;
+    }
+    .content {
+        width: 100%;
+        padding-top: 20px;
+    }
+    .center {
+        display: table;
+        Margin: 0 auto;
+    }
+    img {
+        border: 0;
+    }
+    img.logo {
+        float: left;
+        Margin-left: 5%;
+        max-width: 200px!important;
+    }
+    #callout {
+        float: right;
+        Margin: 4% 5% 2% 0;
+        height: auto;
+        overflow: hidden;
+    }
+    #callout img {
+        max-width: 20px;
+    }
+    .social {
+        list-style-type: none;
+        Margin-top: 1%;
+        padding: 0;
+    }
+    .social li {
+        display: inline-block;
+    }
+    .social li img {
+        max-width: 15px;
+        Margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    /*--- Start Outer Table Banner Image, Text & Button --*/
+    .image img {
+        width: 100%;
+        max-width: 670px;
+        height: auto;
+    }
+    .main-table {
+        width: 100%;
+        max-width: 610px;
+        margin: 0 auto;
+        background-color: #FFF;
+        border-radius: 6px;
+    }
+    .one-column .inner-td {
+        font-size: 16px;
+        line-height: 20px;
+        text-align: justify;
+    }
+    .inner-td {
+        padding: 10px;
+    }
+    .h2 {
+        text-align: center;
+        font-size: 23px;
+        font-weight: 600;
+        line-height: 45px;
+        Margin: 12px;
+        color: #4A4A4A;
+    }
+    p.center {
+        text-align: center;
+        max-width: 580px;
+        line-height: 24px;
+    }
+    .button-holder-center {
+        text-align: center;
+        Margin: 5% 2% 3% 0;
+    }
+    .button-holder {
+        float: right;
+        Margin: 5% 0 3% 0;
+    }
+    .btn {
+        font-size: 15px;
+        font-weight: 600;
+        background: #81BAC6;
+        color: #FFF;
+        text-decoration: none;
+        padding: 9px 16px;
+        border-radius: 28px;
+    }
+    /*--- Start Two Column Image & Text Sections --*/
+    .two-column img {
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+    }
+    .two-column .text {
+        padding: 10px 0;
+    }
+    /*--- Start 3 Column Image & Text Section --*/
+    .outer-table-2 {
+      width: 100%;
+      max-width: 670px;
+      margin: 22px auto;
+      background-color: #C2C1C1;
+        border-bottom: 3px solid #81B9C3;
+        border-top: 3px solid #81B9C3;
+    }
+    .three-column {
+        text-align: center;
+        font-size: 0;
+        padding: 10px 0 30px 0;
+    }
+    .three-column .section {
+        width: 100%;
+        max-width: 200px;
+        display: inline-block;
+        vertical-align: top;
+    }
+    .three-column .content {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .three-column img {
+        width: 100%;
+        max-width: 125px;
+        height: auto;
+    }
+    .outer-table-2 p {
+      margin-top: 6px;
+      color: #FFF;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 23px;
+    }
+    /*--- Start Two Column Article Section --*/
+    .outer-table-3 {
+        width: 100%;
+        max-width: 670px;
+        margin: 22px auto;
+        background-color: #C2C1C1;
+        border-top: 3px solid #81B9C3;
+    }
+    .h3 {
+      text-align: center;
+      font-size: 21px;
+      font-weight: 600;
+      Margin-bottom: 8px;
+      color: #4A4A4A;
+    }
+    /*--- Start Bottom One Column Section --*/
+    .inner-bottom {
+      padding: 22px;
+    }
+    .h1 {
+        text-align: center!important;
+        font-size: 25px!important;
+        font-weight: 600;
+        line-height: 45px;
+        Margin: 12px 0 20px 0;
+        color: #4A4A4A;
+    }
+    .inner-bottom p {
+      font-size: 16px;
+      line-height: 24px;
+      text-align: justify;
+    }
+    /*--- Start Footer Section --*/
+    .footer {
+      width: 100%;
+      background-color: #C2C1C1;
+      Margin: 0 auto;
+        color: #FFF;
+    }
+    .footer  img {
+      max-width: 135px;
+      Margin: 0 auto;
+      display: block;
+      padding: 4% 0 1% 0;
+    }
+    p.footer {
+      text-align: center;
+      color: #FFF!important;
+      line-height: 30px;
+      padding-bottom: 4%;
+        text-transform: uppercase;
+    }
+    /*--- Media Queries --*/
+    @media screen and (max-width: 400px) {
+      .h1 {
+        font-size: 22px;
+      }
+      .two-column .column, .three-column .column {
+        max-width: 100%!important;
+      }
+      .two-column img {
+        width: 100%!important;
+      }
+      .three-column img {
+        max-width: 60%!important;
+      }
+    }
+    @media screen and (min-width: 401px) and (max-width: 400px) {
+
+      .two-column .column {
+        max-width: 50%!important;
+      }
+      .three-column .column {
+        max-width: 33%!important;
+    }
+    }
+    @media screen and (max-width:768px) {
+    img.logo {
+      float:none !important;
+      margin-left:0% !important;
+      max-width: 200px!important;
+    }
+
+    #callout {
+      float:none !important;
+      margin: 0% 0% 0% 0;
+      height: auto;
+      text-align:center;
+      overflow: hidden;
+    }
+    #callout img {
+        max-width:26px !important; 
+    }
+    .two-column .section {
+      width: 100% !important;
+      max-width: 100% !important;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .two-column img {
+      width: 100% !important;
+      height: auto !important;
+    }
+    img.img-responsive {
+        width:100% !important;
+        height:auto !important;
+        max-width:100% !important;
+    }
+    .content {
+      width: 100%;
+      padding-top:0px !important;
+    }
+    }
+  </style>
+ </head>
+<body style="padding: 15px;background-color: #FFF;margin: 0!important;">
+  <div class="wrapper" style="width: 100%;table-layout: fixed;">
+    <div class="wrapper-inner" style="width: 100%;background-color: #eee;max-width: 670px;margin: 0 auto;">
+
+
+      <!-- full width top most table -->
+      <table class="outer-table" style="border-spacing: 0;font-family: sans-serif;color: #727f80;width: 100%;max-width: 670px;margin: 0 auto;background-color: #FFF;">
+        <tr>
+          <td class="header" style="padding: 0;background-color: #C2C1C1;border-bottom: 3px solid #81B9C3;">
+            <p style="margin: 0;text-align: center;padding: 1%;font-weight: 500;font-size: 11px;text-transform: uppercase;"><a href="#" style="color: #F1F1F1;text-decoration: none;">Click to view this email in your browser</a></p>
+          </td>
+        </tr>
+      </table> 
+
+
+      <!-- 1st main table -->
+      <table class="main-table-first" style="border-spacing: 0;font-family: sans-serif;color: #727f80;width: 100%;max-width: 610px;margin: 0 auto;background-color: #FFF;border-radius: 6px;margin-top: 25px;">
+        <tr>
+          <td class="two-column" style="padding: 5px 0 10px 0;text-align: center;font-size: 0;"> <!-- container for 2 columns -->
+            <div class="section" style="width: 100%;max-width: 300px;display: inline-block;vertical-align: top;"> <!-- column 1 -->
+              <table width="100%" style="border-spacing: 0;font-family: sans-serif;color: #727f80;">
+                <tr>
+                  <td class="inner-td" style="padding: 10px;">
+                    <table class="content" style="border-spacing: 0;font-family: sans-serif;color: #727f80;width: 100%;padding-top: 20px;font-size: 16px;line-height: 20px;text-align: justify;">
+                      <tr>
+                        <td align="center" style="padding: 0;">
+                          <img class="logo" src="w3newbie-logo.png" alt="logo" style="border: 0;float: left;margin-left: 5%;width: 100%;max-width: 200px!important;height: auto;"> <!-- LOGO -->
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </div> <!-- End column 1 -->
+            <div class="section" style="width: 100%;max-width: 300px;display: inline-block;vertical-align: top;"> <!-- column 2 -->
+              <table width="100%" style="border-spacing: 0;font-family: sans-serif;color: #727f80;">
+                <tr>
+                  <td class="inner-td" style="padding: 10px;">
+                    <table class="content" style="border-spacing: 0;font-family: sans-serif;color: #727f80;width: 100%;padding-top: 20px;font-size: 16px;line-height: 20px;text-align: justify;">
+                      <tr>
+                        <td style="padding: 0;">
+                          <!-- SOCIAL ICONS -->
+                          <div id="callout" style="float: right;margin: 4% 5% 2% 0;height: auto;overflow: hidden;">
+                            <ul class="social" style="list-style-type: none;margin-top: 1%;padding: 0;">
+                              <li style="display: inline-block;"><a href="#" style="color: #F1F1F1;text-decoration: none;"><img src="facebook.png" alt="facebook" style="border: 0;width: 100%;max-width: 20px;height: auto;margin-bottom: 0;padding-bottom: 0;"></a></li>
+                              <li style="display: inline-block;"><a href="#" style="color: #F1F1F1;text-decoration: none;"><img src="googleplus.png" alt="googleplus" style="border: 0;width: 100%;max-width: 20px;height: auto;margin-bottom: 0;padding-bottom: 0;"></a></li>
+                              <li style="display: inline-block;"><a href="#" style="color: #F1F1F1;text-decoration: none;"><img src="twitter.png" alt="twitter" style="border: 0;width: 100%;max-width: 20px;height: auto;margin-bottom: 0;padding-bottom: 0;"></a></li>
+                              <li style="display: inline-block;"><a href="#" style="color: #F1F1F1;text-decoration: none;"><img src="youtube.png" alt="youtube" style="border: 0;width: 100%;max-width: 20px;height: auto;margin-bottom: 0;padding-bottom: 0;"></a></li>
+                              <li style="display: inline-block;"><a href="#" style="color: #F1F1F1;text-decoration: none;"><img src="instagram.png" alt="instagram" style="border: 0;width: 100%;max-width: 20px;height: auto;margin-bottom: 0;padding-bottom: 0;"></a></li>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </div> <!-- End column 2 -->
+          </td> 
+        </tr>
+      </table>
+
+
+      <!-- full width banner -->
+      <table class="outer-table" style="border-spacing: 0;font-family: sans-serif;color: #727f80;width: 100%;max-width: 670px;margin: 0 auto;background-color: #FFF;">
+        <tr>
+          <td class="image" style="padding: 0;">
+            <img src="green-background.png" alt="banner-image" style="border: 0;width: 100%;max-width: 670px;height: auto;">
+          </td>
+        </tr>
+      </table>
+
+
+      <!-- 2nd main table -->
+      <table class="main-table" style="border-spacing: 0;font-family: sans-serif;color: #727f80;width: 100%;max-width: 610px;margin: 0 auto;background-color: #FFF;border-radius: 6px;">
+
+        <!-- header, paragraph, and buttons -->
+        <tr>
+          <td class="one-column" style="padding: 0;">
+            <table width="100%" style="border-spacing: 0;font-family: sans-serif;color: #727f80;">
+              <tr>
+                <td class="inner-td" style="padding: 10px;font-size: 16px;line-height: 20px;text-align: justify;">
+                  <p class="h2" style="margin: 12px;text-align: center;font-size: 23px;font-weight: 600;line-height: 45px;color: #4A4A4A;">Weekly Newsletter</p>
+                  <p class="center" style="margin: 0 auto;display: table;text-align: center;max-width: 580px;line-height: 24px;">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                  <p class="button-holder-center" style="margin: 5% 2% 3% 0;text-align: center;">
+                    <a class="btn" href="#" style="color: #FFF;text-decoration: none;font-size: 15px;font-weight: 600;background: #81BAC6;padding: 9px 16px;border-radius: 28px;">Learn More</a>
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- 2 column for search and chat images -->
+        <tr>
+          <td class="two-column" style="padding: 5px 0 10px 0;text-align: center;font-size: 0;"> <!-- container for 2 columns -->
+            <div class="section" style="width: 100%;max-width: 300px;display: inline-block;vertical-align: top;"> <!-- column 1 -->
+              <table width="100%" style="border-spacing: 0;font-family: sans-serif;color: #727f80;">
+                <tr>
+                  <td class="inner-td" style="padding: 10px;">
+                    <table class="content" style="border-spacing: 0;font-family: sans-serif;color: #727f80;width: 100%;padding-top: 20px;font-size: 16px;line-height: 20px;text-align: justify;">
+                      <!-- SEARCH image and text -->
+                      <tr>
+                        <td style="padding: 0;">
+                          <img class="img-responsive" src="search.png" alt="search" style="border: 0;width: 100%;max-width: 280px;height: auto;"> 
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text" style="padding: 10px 0;"> 
+                          <p style="margin: 0;">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat.
+                          </p> 
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </div> <!-- End column 1 -->
+            <div class="section" style="width: 100%;max-width: 300px;display: inline-block;vertical-align: top;"> <!-- column 2 -->
+              <table width="100%" style="border-spacing: 0;font-family: sans-serif;color: #727f80;">
+                <tr>
+                  <td class="inner-td" style="padding: 10px;">
+                    <table class="content" style="border-spacing: 0;font-family: sans-serif;color: #727f80;width: 100%;padding-top: 20px;font-size: 16px;line-height: 20px;text-align: justify;">
+                      <!-- CHAT image and text -->
+                      <tr>
+                        <td style="padding: 0;">
+                          <img class="img-responsive" src="chat.png" alt="chat" style="border: 0;width: 100%;max-width: 280px;height: auto;"> 
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text" style="padding: 10px 0;"> 
+                          <p style="margin: 0;">
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                          </p> 
+                        </td>
+                      </tr>                      
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </div> <!-- End column 2 -->
+          </td> 
+        </tr>
+
+      </table>
+
+
+      <!-- full width container for 3 icons -->
+      <table class="outer-table-2" style="background-color: #C2C1C1;border-spacing: 0;font-family: sans-serif;color: #727f80;width: 100%;max-width: 670px;margin: 22px auto;border-bottom: 3px solid #81B9C3;border-top: 3px solid #81B9C3;">
+        <tr>
+          <td class="three-column" style="padding: 10px 0 30px 0;text-align: center;font-size: 0;"> <!-- container for 3 columns -->
+            <div class="section" style="width: 100%;max-width: 200px;display: inline-block;vertical-align: top;"> <!-- column 1 -->
+              <table width="100%" style="border-spacing: 0;font-family: sans-serif;color: #727f80;">
+                <tr>
+                  <td class="inner-td" style="padding: 10px;">
+                    <table class="content" style="border-spacing: 0;font-family: sans-serif;color: #727f80;width: 100%;padding-top: 20px;font-size: 16px;line-height: 20px;">
+                      <!-- image -->
+                      <tr>
+                        <td style="padding: 0;">
+                          <img src="mouse.png" alt="mouse" style="border: 0;width: 100%;max-width: 125px;height: auto;">
+                        </td>
+                      </tr>
+                      <!-- text -->
+                      <tr>
+                        <td class="text" style="padding: 0;">
+                          <p style="margin: 0;margin-top: 6px;color: #FFF;font-size: 18px;font-weight: 500;line-height: 23px;">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                          </p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </div> <!-- End column 1 -->
+
+            <div class="section" style="width: 100%;max-width: 200px;display: inline-block;vertical-align: top;"> <!-- column 2 -->
+              <table width="100%" style="border-spacing: 0;font-family: sans-serif;color: #727f80;">
+                <tr>
+                  <td class="inner-td" style="padding: 10px;">
+                    <table class="content" style="border-spacing: 0;font-family: sans-serif;color: #727f80;width: 100%;padding-top: 20px;font-size: 16px;line-height: 20px;">
+                      <!-- image -->
+                      <tr>
+                        <td style="padding: 0;">
+                          <img src="mac.png" alt="mac" style="border: 0;width: 100%;max-width: 125px;height: auto;">
+                        </td>
+                      </tr>
+                      <!-- text -->
+                      <tr>
+                        <td class="text" style="padding: 0;">
+                          <p style="margin: 0;margin-top: 6px;color: #FFF;font-size: 18px;font-weight: 500;line-height: 23px;">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                          </p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>              
+            </div> <!-- End column 2 -->
+
+            <div class="section" style="width: 100%;max-width: 200px;display: inline-block;vertical-align: top;"> <!-- column 3 -->
+              <table width="100%" style="border-spacing: 0;font-family: sans-serif;color: #727f80;">
+                <tr>
+                  <td class="inner-td" style="padding: 10px;">
+                    <table class="content" style="border-spacing: 0;font-family: sans-serif;color: #727f80;width: 100%;padding-top: 20px;font-size: 16px;line-height: 20px;">
+                      <!-- image -->
+                      <tr>
+                        <td style="padding: 0;">
+                          <img src="phone.png" alt="phone" style="border: 0;width: 100%;max-width: 125px;height: auto;">
+                        </td>
+                      </tr>
+                      <!-- text -->
+                      <tr>
+                        <td class="text" style="padding: 0;">
+                          <p style="margin: 0;margin-top: 6px;color: #FFF;font-size: 18px;font-weight: 500;line-height: 23px;">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                          </p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>              
+            </div> <!-- End column 3 -->
+          </td>
+        </tr>
+      </table>
+
+
+      <!-- 3rd main table -->
+      <table class="main-table" style="border-spacing: 0;font-family: sans-serif;color: #727f80;width: 100%;max-width: 610px;margin: 0 auto;background-color: #FFF;border-radius: 6px;">
+        <!-- 1st row -->
+        <tr>
+          <td class="two-column" style="padding: 5px 0 10px 0;text-align: center;font-size: 0;">
+            <div class="section" style="width: 100%;max-width: 300px;display: inline-block;vertical-align: top;"> <!-- column 1 -->
+              <table width="100%" style="border-spacing: 0;font-family: sans-serif;color: #727f80;">
+                <tr>
+                  <td class="inner-td" style="padding: 10px;">
+                    <table class="content" style="border-spacing: 0;font-family: sans-serif;color: #727f80;width: 100%;padding-top: 20px;font-size: 16px;line-height: 20px;text-align: justify;">
+                      <!-- image -->
+                      <tr>
+                        <td style="padding: 0;">
+                          <img src="pie-chart.png" alt="pie-chart" style="border: 0;width: 100%;max-width: 280px;height: auto;">
+                        </td>
+                      </tr>
+                      <!-- text -->
+                      <tr>
+                        <td class="text" style="padding: 10px 0;">
+                          <p class="h3" style="margin: 0;text-align: center;font-size: 21px;font-weight: 600;margin-bottom: 8px;color: #4A4A4A;">Article Content</p>
+                          <p style="margin: 0;">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                          </p>
+                          <br>
+                          <p style="margin: 0;">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                          </p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </div> <!-- End column 1 -->
+
+            <div class="section" style="width: 100%;max-width: 300px;display: inline-block;vertical-align: top;"> <!-- column 2 -->
+              <table width="100%" style="border-spacing: 0;font-family: sans-serif;color: #727f80;">
+                <tr>
+                  <td class="inner-td" style="padding: 10px;">
+                    <table class="content" style="border-spacing: 0;font-family: sans-serif;color: #727f80;width: 100%;padding-top: 20px;font-size: 16px;line-height: 20px;text-align: justify;">
+                      <!-- text -->
+                      <tr>
+                        <td class="text" style="padding: 10px 0;">
+                          <p class="h3" style="margin: 0;text-align: center;font-size: 21px;font-weight: 600;margin-bottom: 8px;color: #4A4A4A;">Article Content</p>
+                          <p style="margin: 0;">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                          </p>
+                          <br>
+                          <p style="margin: 0;">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                          </p>
+                        </td>
+                      </tr>
+                      <!-- image -->
+                      <tr>
+                        <td style="padding: 0;">
+                          <img src="users.png" alt="users" style="border: 0;width: 100%;max-width: 280px;height: auto;">
+                        </td>
+                      </tr>                    
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </div> <!-- End column 2 -->
+          </td>
+        </tr>
+        <!-- 2nd row -->
+        <tr>
+          <td class="one-column" style="padding: 0;">
+            <table width="100%" style="border-spacing: 0;font-family: sans-serif;color: #727f80;">
+              <tr>
+                <td class="inner-bottom" style="padding: 22px;">
+                  <p class="h1" style="margin: 12px 0 20px 0;font-weight: 600;line-height: 24px;color: #4A4A4A;font-size: 25px!important;text-align: center!important;">The Real Story</p>
+                  <p style="margin: 0;font-size: 16px;line-height: 24px;text-align: justify;">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                  <br>
+                  <p style="margin: 0;font-size: 16px;line-height: 24px;text-align: justify;">
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                  <div class="button-holder" style="float: right;margin: 5% 0 3% 0;">
+                    <a class="btn" href="#" style="color: #FFF;text-decoration: none;font-size: 15px;font-weight: 600;background: #81BAC6;padding: 9px 16px;border-radius: 28px;">Learn More</a>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+
+      
+      <!-- full width bottom most table -->
+      <table class="outer-table-3" style="border-spacing: 0;font-family: sans-serif;color: #727f80;width: 100%;max-width: 670px;margin: 22px auto;background-color: #C2C1C1;border-top: 3px solid #81B9C3;">
+        <tr>
+          <td class="one-column" style="padding: 0;">
+            <table width="100%" style="border-spacing: 0;font-family: sans-serif;color: #727f80;">
+              <tr>
+                <td class="footer" style="padding: 0;width: 100%;background-color: #C2C1C1;margin: 0 auto;color: #FFF;">
+                  <img src="w3newbie-logo.png" alt="logo" style="border: 0;max-width: 135px;margin: 0 auto;display: block;padding: 4% 0 1% 0;">
+                  <p class="footer" style="margin: 0 auto;width: 100%;background-color: #C2C1C1;color: #FFF!important;text-align: center;line-height: 30px;padding-bottom: 4%;text-transform: uppercase;">
+                    1000 Street Road, Brooklyn, NY 11204<br>
+                    &copy; w3newbie, 2017<br>
+                    <a href="#" style="color: #F1F1F1;text-decoration: none;">UNSUBSCRIBE</a>
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+
+    </div> <!-- End Wrapper Inner -->
+  </div> <!-- End Wrapper -->
+</body>
+</html>
